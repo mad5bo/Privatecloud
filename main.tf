@@ -29,7 +29,7 @@ provider "openstack" {
   version  = "~> 0.3"
 }
 
-#variable "number_of_instances" {}
+variable "number_of_instances" {}
 
 resource "openstack_compute_instance_v2" "single-vm" {
   count     = "${var.number_of_instances}"
