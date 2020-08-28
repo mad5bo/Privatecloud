@@ -27,34 +27,30 @@
   } ],
   "template_input_params": [
     {
-      "name": "openstack_image_name",
-      "label": "Openstack Image name",
-      "description": "The Name of the image to be used for deploy operations.",
+      "name": "openstack_image_id",
+      "label": "Openstack Image Id",
+      "description": "The ID of the image to be used for deploy operations.",
       "type": "string",
       "default": "",
-      "regex": "",
-      "group_name": "",
+      "validation": "",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false,
-      "validation": ""
+      "immutable_after_create": false
     },
     {
-      "name": "openstack_flavor_name",
-      "label": "Openstack Flavor Name",
-      "description": "The Name of the flavor to be used for deploy operations.",
+      "name": "openstack_flavor_id",
+      "label": "Openstack Flavor Id",
+      "description": "The ID of the flavor to be used for deploy operations.",
       "type": "string",
       "default": "",
-      "regex": "",
-      "group_name": "",
+      "validation": "",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false,
-      "validation": ""
+      "immutable_after_create": false
     },
     {
       "name": "openstack_network_name",
@@ -62,14 +58,51 @@
       "description": "The name of the network to be used for deploy operations.",
       "type": "string",
       "default": "",
-      "regex": "",
-      "group_name": "",
+      "validation": "",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false,
-      "validation": ""
+      "immutable_after_create": false
+    },
+    {
+      "name": "image_id_username",
+      "label": "Image Id Username",
+      "description": "The username to SSH into image ID",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "image_id_password",
+      "label": "Image Id Password",
+      "description": "The password of the username to SSH into image ID",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "pool",
+      "label": "Pool",
+      "description": "Pool",
+      "type": "string",
+      "default": "VLAN354",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
     },
     {
       "name": "ibm_stack_name",
@@ -77,24 +110,33 @@
       "description": "Stack Name",
       "type": "string",
       "default": "",
-      "regex": "",
-      "group_name": "",
+      "validation": "",
       "required": true,
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false,
-      "validation": ""
+      "immutable_after_create": false
+    },
+    {
+      "name": "number_of_instances",
+      "label": "Number Of Instances",
+      "description": "Number Of Instances",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
     }
   ],
   "template_output_params": [  {
     "name": "single-vm-ip",
     "label": "Single Vm Ip",
     "description": "Single Vm Ip",
-    "group_name": "",
     "secured": false,
     "hidden": false,
-    "shortname": "",
-    "type": "string"
+    "shortname": ""
   } ]
 }
